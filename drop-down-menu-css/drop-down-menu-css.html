@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demo Drop down menu - zKIWI</title>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>-->
+<!-- <link href="http://zkiwi.com/demobox/css/style-demo.css" rel="stylesheet" media="all" /> -->
+<style type="text/css">
+.menu
+{
+	width:70%; 
+	height:30px; 
+	line-height:30px;
+	margin:0 auto;
+}
+.menu li
+{
+	position:relative;
+	display:inline-block;
+	width:100%;
+}
+.menu li ul
+{
+	position:absolute; 
+	display:none;
+}
+.menu li:hover > ul
+{
+	display:block;
+}
+.menu a
+{
+	display:block; 
+	color:#fff;
+	background:#606c88;
+}
+.menu ul ul,
+.menu li:hover > a,
+.menu a:hover
+{
+	opacity:.8;
+}
+/*Level 1*/
+.menu > ul > li
+{
+	float:left;
+	width:24%;
+}
+.menu > ul > li > a
+{
+	width:94%;
+	padding-left:3%; 
+	padding-right:3%; 
+	text-transform:uppercase; 
+	font-weight:bold;
+}
+/*Level 2*/
+.menu > ul > li > ul
+{
+	position:absolute; 
+	top:100%; 
+	left:-10px; 
+	width:100%; 
+}
+.menu > ul > li > ul > li
+{
+	width:100%;
+}
+.menu > ul > li > ul > li > a
+{
+	width:94%;
+	padding-left:3%;
+	padding-right:3%;
+}
+/* Level +++ */
+.menu ul ul ul
+{
+	width:100%;
+	left:100%;
+	top:0;
+	background:#a1b1d4;
+}
+.menu ul ul ul li
+{
+	width:100%;
+}
+.menu ul ul ul li a
+{
+	width:94%;
+	padding-left:3%;
+	padding-right:3%;
+}
+
+</style>
+</head>
+
+<body>
+<div class="wr">
+
+  <div class="logo">
+  	<a href="http://zkiwi.com" title="Về trang chủ">
+    	<img src="http://zkiwi.com/demobox/imgs/logo-demo.png" alt="zkiwi demo" />
+    </a>
+  </div>
+  
+  <h1>Drop-down menu</h1>
+  
+  <div class="menu">
+  	<ul>
+    	<li>
+        	<a href="#">Menu 1</a>
+            <ul>
+            	<li><a href="#">Menu 1 - Lv2</a>
+                	<ul>
+                    	<li><a href="#">Menu 1 - Lv3</a></li>
+                        <li><a href="#">Menu 1 - Lv3</a></li>
+                        <li><a href="#">Menu 1 - Lv3</a></li>
+                        <li><a href="#">Menu 1 - Lv3</a></li>
+                        <li><a href="#">Menu 1 - Lv3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Menu 1 - Lv2</a>
+                	<ul>
+                    	<li><a href="#">Menu 1 - Lv3</a></li>
+                        <li><a href="#">Menu 1 - Lv3</a></li>
+                        <li><a href="#">Menu 1 - Lv3</a></li>
+                        <li><a href="#">Menu 1 - Lv3</a></li>
+                        <li><a href="#">Menu 1 - Lv3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Menu 1 - Lv2</a></li>
+                <li><a href="#">Menu 1 - Lv2</a></li>
+                <li><a href="#">Menu 1 - Lv2</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">Menu 2</a>
+            <ul>
+            	<li><a href="#">Menu 2 - Lv2</a>
+                	<ul>
+                    	<li><a href="#">Menu 2 - Lv3</a>
+                        	<ul>
+                            	<li><a href="#">Menu 2 - Lv4</a></li>
+                                <li><a href="#">Menu 2 - Lv4</a></li>
+                                <li><a href="#">Menu 2 - Lv4</a></li>
+                                <li><a href="#">Menu 2 - Lv4</a></li>
+                                <li><a href="#">Menu 2 - Lv4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Menu 2 - Lv3</a></li>
+                        <li><a href="#">Menu 2 - Lv3</a></li>
+                        <li><a href="#">Menu 2 - Lv3</a></li>
+                        <li><a href="#">Menu 2 - Lv3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Menu 2 - Lv2</a>
+                	<ul>
+                    	<li><a href="#">Menu 2 - Lv3</a></li>
+                        <li><a href="#">Menu 2 - Lv3</a>
+                        	<ul>
+                            	<li><a href="#">Menu 2 - Lv4</a></li>
+                                <li><a href="#">Menu 2 - Lv4</a></li>
+                                <li><a href="#">Menu 2 - Lv4</a></li>
+                                <li><a href="#">Menu 2 - Lv4</a></li>
+                                <li><a href="#">Menu 2 - Lv4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Menu 2 - Lv3</a></li>
+                        <li><a href="#">Menu 2 - Lv3</a></li>
+                        <li><a href="#">Menu 2 - Lv3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Menu 2 - Lv2</a></li>
+                <li><a href="#">Menu 2 - Lv2</a></li>
+                <li><a href="#">Menu 2 - Lv2</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">Menu 3</a>
+            <ul>
+            	<li><a href="#">Menu 3 - Lv2</a></li>
+                <li><a href="#">Menu 3 - Lv2</a></li>
+                <li><a href="#">Menu 3 - Lv2</a></li>
+                <li><a href="#">Menu 3 - Lv2</a></li>
+                <li><a href="#">Menu 3 - Lv2</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">Menu 4</a>
+            <ul>
+            	<li><a href="#">Menu 4 - Lv2</a></li>
+                <li><a href="#">Menu 4 - Lv2</a></li>
+                <li><a href="#">Menu 4 - Lv2</a></li>
+                <li><a href="#">Menu 4 - Lv2</a></li>
+                <li><a href="#">Menu 4 - Lv2</a></li>
+            </ul>
+        </li>
+    </ul>
+  </div>
+  
+</div>
+</body>
+</html>

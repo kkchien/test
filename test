@@ -1,0 +1,328 @@
+<header>
+
+
+  <a routerLink="/" >
+    <img id="logo" *ngIf="type ==0"  src="assets/logo/logo_chuan_vn.png">
+    <img  id="logo" *ngIf="type !=0"  src="assets/logo/logo_chuan_en.png">
+  </a>
+
+  <nav>
+
+    <span id="menu-icon">
+      <img src="../../../assets/icon/menu.png" alt="">
+    </span>
+    <ul>
+      <li *ngFor="let m of data.menu; let i = index;">
+        <a [routerLink]="m.url" (click)="doSelect(i)" data-toggle="dropdown" [ngClass]="{'menu-active':select_tab == i}">
+          {{m.name}}
+          <span *ngIf="i==4" class="caret"></span>
+        </a>
+        <ul id="sub" *ngIf="checksub">
+          <li *ngFor="let sub of m.submenuinfo; let j = index">
+            <a [routerLink]="sub.url" (click)="doSelect(j)" class="text-default">
+              {{sub.namechil}}
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+  </nav>
+  <span *ngIf="type==0" class="fa-stack fa-lg  pull-right language" title="Tiếng Anh" (click)="setLanguageType(1)">
+    <img id="logo2" class="img-responsive logo-language" src="assets/icon/en.png">
+  </span>
+
+  <span *ngIf="type==1" class="fa-stack fa-lg  pull-right language" title="Vietnamese" (click)="setLanguageType(0)">
+    <img id="logo2" class="img-responsive logo-language" src="assets/icon/vn.png">
+  </span>
+</header>
+
+
+// csss
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    nav{
+      padding-top: 3%;
+      padding-left: 25% !important;
+    }
+    header{
+      height: 10% !important;
+    }
+    #logo2{
+     
+      margin-top: 53% !important;
+    margin-left: -28% !important;
+      float: none !important;
+      width: 45px !important;
+      height: 38px !important;
+    }
+    #logo{
+      padding-left: 0%;
+      margin: -1.6% 1% 0% 5.2%!important;
+      width: 36% !important;
+      height: 122% !important;
+    }
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px){
+    nav{
+      padding-left: 30% !important;
+      padding-top: 3%;
+    }
+    header{
+      height: 10% !important;
+    }
+    #logo2{
+      margin-top: 53% !important;
+      margin-left: -28% !important;
+      float: none !important;
+      width: 45px !important;
+      height: 38px !important;
+    }
+    #logo{
+      padding-left: 0%;
+      margin: -1.6% 1% 0% 5.2%!important;
+      width: 36% !important;
+      height: 122% !important;
+    }
+  }
+
+  @media only screen and (max-width : 768px) {
+    header{
+      height: 10% !important;
+    }
+    #menu-icon {
+      display:inline-block;
+    }
+    nav ul li{
+      text-align: left;
+    }
+    /* #sub{
+      position: unset;
+    } */
+    nav{
+      /* position: unset; */
+     
+      background: cyan;
+    }
+
+    
+    nav ul, nav:active #sub { 
+      display: none;
+      position: absolute;
+      background: #fff;
+      right:0px ;
+      width: 100%;
+      border-radius: 4px 0 4px 4px;
+    }
+    nav>ul>li {
+      position: relative !important;
+      /* text-align: center; */
+      width: 100%;
+      padding: 10px 0;
+      margin: 0;
+    }
+    #menu-icon{
+      width: 40px;
+    }
+    nav:hover ul {
+      display: block;
+    }
+  }
+  @media only screen and (min-width: 769px) and (max-width: 1024px){
+    .nav .itemMenu{
+      position: relative;
+  }
+    nav{
+     
+      /* padding-left: 20% !important; */
+      padding-top: 45px !important;
+      float: none !important;
+    } 
+    header{
+      height: 12% !important;
+    }
+    li{
+      padding: 1% !important;
+    }
+    #logo2{
+     
+      margin-top: -175% !important;
+       margin-left: -28% !important;
+      float: none !important;
+      width: 45px !important;
+      height: 38px !important;
+    }
+    #logo{
+    
+       padding-left: 1%;
+     margin-top: -1% !important;
+      width: 24% !important;
+      height: 127% !important
+    }
+    nav ul li {
+  
+      display: inline-block;
+      padding: 10px;
+     
+      /* text-align: left; */
+    }
+  
+
+  #menu-icon {
+
+    display:none;
+
+  }
+  a{
+    font-size: 11px;
+  }
+  #sub{
+    width: 120px !important;
+  }
+
+  }
+
+  @media only screen and (min-width: 1025px)
+{
+  .nav .itemMenu{
+      position: relative;
+    }
+  
+    header{
+      height: 10% !important;
+    }
+    a{
+      font-size: 14px;
+    }
+    nav ul li {
+  
+      display: inline-block;
+      padding: 10px;
+     
+      /* text-align: left; */
+    }
+  
+    nav{
+     
+      padding-top: 45px !important; 
+       padding-left: 3% !important;
+    }
+    #logo2{
+      margin-top: 45px !important;
+      margin-left: -30% !important;
+      float: left !important;
+      width: 100% !important;
+      height: 100% !important;
+  
+    }
+    #logo {
+      margin: -1.6% 1% 0% 0.2%!important;
+      padding-left: 2% !important;
+      width: 19.5% !important;
+      height: 159% !important;
+      
+  }
+
+  #menu-icon {
+
+    display:none;
+
+  }
+  }
+
+
+// css header
+
+a {
+
+    color: #4C9CF1;
+    text-decoration: none;
+    font-weight: bold;
+  
+  }
+  
+  img {
+  
+    width: 100%;
+  
+  }
+  
+  header {
+  
+    background: #fff;
+    width: 100%;
+    height: 8%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 4px solid #4C9CF1;
+    z-index: 100;
+  
+  }
+ 
+  #logo{
+  
+    margin: 20px;
+    float: left;
+    width: 30%;
+    height: 67%;
+  
+    display: block;
+  
+  }
+  #logo2{
+    margin: 40px;
+    float: left;
+    width: 40px;
+    height: 40px;
+ 
+    display: block;
+  }
+  
+  
+  nav {
+  
+    float: left;
+    /* padding: 20px;  */
+  }
+  
+  #menu-icon {
+    display: hidden;
+    width: 40px;
+    height: 40px;
+    /* background: url("../../../assets/icon/menu.png") center; */
+  
+  }
+ 
+  
+  ul {
+    list-style: none;
+  }
+  
+
+nav ul li:hover{
+    background: rgb(236, 234, 234);
+    border-radius: 4px 4px 0 0;
+}
+
+
+
+
+
+#sub li{
+    list-style-type: none;
+}
+
+#sub li a{
+    text-decoration: none;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+}
+/* #sub{
+    position: absolute;
+    background: #eee;
+    width: 50%;
+    padding-left: 0px;
+}  */
